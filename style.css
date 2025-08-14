@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body {
+  text-align: center;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #4adede);
+  height: 100%;
+  width: 100%;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Typewriter Title */
+.typewriter {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px black;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  margin-bottom: 20px;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* Photo */
+.photo {
+  margin: 20px 0;
+}
+.pranjali {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #ff0;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px #ff0; }
+  50% { box-shadow: 0 0 25px #ff69b4; }
+  100% { box-shadow: 0 0 5px #ff0; }
+}
+
+/* Wishes */
+.wishes {
+  margin-top: 20px;
+}
+.wish {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  animation: fadeIn 3s infinite alternate;
+}
+@keyframes fadeIn {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* Canvas */
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Emoji Rain */
+.emoji {
+  position: absolute;
+  top: -50px;
+  font-size: 1.8rem;
+  animation: fall linear forwards;
+}
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .typewriter { font-size: 1.8rem; }
+  .pranjali { width: 180px; }
+  .wish { font-size: 1rem; }
+}
+
+.gallery {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.photo-gallery {
+  perspective: 1200px;
+  height: 400px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.photo-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.photo-container img {
+  position: absolute;
+  width: 220px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid #fff;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+}
