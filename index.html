@@ -188,30 +188,60 @@
 
 
 <!-- =================== SECTION: WISH WALL =================== -->
-<section id="wishWall" style="padding:48px 12px;color:#fff;">
-  <h2 style="text-align:center;margin:0 0 18px;font-size:clamp(22px,4vw,30px);">Wish Wall 💌</h2>
-
-  <!-- Input Row -->
- 
-  </div>
+<section id="wishWall" style="padding:32px 12px;color:#fff;">
+  <h2 style="text-align:center;margin:0 0 18px;font-size:clamp(20px,4vw,28px);">Wish Wall 💌</h2>
 
   <!-- Grid -->
-  <div id="wishGrid" style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;padding:8px;">
-    <!-- Default wishes -->
-    <div class="wishCard" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:14px;border-radius:14px;min-height:88px;display:flex;align-items:center;justify-content:center;text-align:center;animation:wwFloat 6s ease-in-out infinite;">
-      Hmesha  ye chulbula pan barkarar rhe ✨
-    </div>
-    <div class="wishCard" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:14px;border-radius:14px;min-height:88px;display:flex;align-items:center;justify-content:center;text-align:center;animation:wwFloat 7s ease-in-out infinite;">
-      Apne fashion se Miss univeses me darr ka mahaul late raho 😄
-    </div>
-    <div class="wishCard" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:14px;border-radius:14px;min-height:88px;display:flex;align-items:center;justify-content:center;text-align:center;animation:wwFloat 5.5s ease-in-out infinite;">
-      Jai Shree Ram 🙏
-      Thala_paglu  
-    </div>
-    <div class="wishCard" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:14px;border-radius:14px;min-height:88px;display:flex;align-items:center;justify-content:center;text-align:center;animation:wwFloat 6.5s ease-in-out infinite;">
-       This is where it ends… take care.
-    </div>
+  <div id="wishGrid">
+    <div class="wishCard">Hmesha ye chulbula pan barkarar rhe ✨</div>
+    <div class="wishCard">Apne fashion se Miss univeses me darr ka mahaul late raho 😄</div>
+    <div class="wishCard">Jai Shree Ram 🙏<br>Thala_paglu</div>
+    <div class="wishCard">This is where it ends… take care.</div>
   </div>
+</section>
+
+<style>
+  #wishGrid {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    padding: 8px;
+  }
+
+  .wishCard {
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .25);
+    padding: 14px;
+    border-radius: 14px;
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+    animation: wwFloat 6s ease-in-out infinite;
+    font-size: clamp(14px, 3.5vw, 16px); /* text size mobile ke hisaab se adjust hoga */
+  }
+
+  @keyframes wwFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Mobile friendly tweaks */
+  @media (max-width: 480px) {
+    #wishGrid {
+      grid-template-columns: 1fr; /* mobile pe ek row me ek card */
+    }
+    .wishCard {
+      min-height: auto;
+      padding: 16px;
+    }
+  }
+</style>
 
   <!-- Scoped keyframes -->
   <style>
