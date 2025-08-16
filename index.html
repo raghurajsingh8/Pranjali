@@ -4,7 +4,338 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Pranjali</title>
+  <link rel="icon" type="image/x-icon" href="IMAGES/hbd.png"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Pranjali</title>
   <link rel="icon" type="image/x-icon" href="IMAGES/hbd.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TITLE -->
+  <div class="header">
+    <h1 class="typewriter">🎉 Happy Birthday Dear Pranjali 🎂</h1>
+  </div>
+
+  <!-- PHOTO -->
+  <div class="photo">
+    <img src="IMAGES/PRAAN_WITH_CAKE.png" alt="Pranjali with Cake" class="pranjali">
+  </div>
+
+  <!-- WISHES -->
+  <div class="wishes">
+    <p class="wish">💖 Keep that playful spark alive in you always.</p>
+    <p class="wish">😊 Stay happy no matter what, because your smile lights everything up.</p>
+    <p class="wish">🌟 May all your dreams come true, and may God’s blessings always be with you.</p>
+  </div>
+
+  <!-- CANVAS for Fireworks + Confetti -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Emoji Rain -->
+  <div class="emoji-rain"></div>
+
+  <!-- Background Song -->
+  <audio id="bg-music" >
+  <source src="happy-birthday-314197.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Hidden Play Button (user ke click karte hi gaana auto bajega aur loop hoga) -->
+<button id="play-music" style="display:none;">Play</button>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const playButton = document.getElementById("play-music");
+
+  // Mobile/Desktop autoplay fix
+  document.addEventListener("DOMContentLoaded", () => {
+    // Agar autoplay block hua to ek fallback rakho
+    const tryPlay = music.play();
+    if (tryPlay !== undefined) {
+      tryPlay.catch(() => {
+        // Agar block ho gaya to button show kardo
+        playButton.style.display = "block";
+      });
+    }
+  });
+
+  // User ek bar click karega to autoplay enable ho jayega
+  playButton.addEventListener("click", () => {
+    music.play();
+    playButton.style.display = "none"; // button fir hide ho jayega
+  });
+</script>
+<!-- Next Section -->
+<section class="full-image-section">
+  <img height="80%" width="80%" src="IMAGES/ALL_EYES_ON_QUEEN.jpg" alt="All Eyes on Queen">
+</section>
+
+
+ <section class="gallery" id="gallery">
+    <h2>Beautiful Memories</h2>
+    <div class="photo-gallery">
+      <div class="photo-container" id="photoContainer">
+        <img src="IMAGES/bakri.png" />
+        <img src="IMAGES/chand.jpg" />
+        <img src="IMAGES/pra_barrish.jpg" />
+        <img src="IMAGES/pra_par.jpg" />
+        <img src="IMAGES/PRAAN_WITH_CAKE.png" />
+        <img src="IMAGES/praswe.png" />
+        <img src="IMAGES/redp.png" />
+        <img src="IMAGES/scooter.png" />
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECTION: TIMELINE OF MEMORIES =================== -->
+<section id="tlSection" style="padding:48px 16px; color:#fff;">
+  <h2 style="text-align:center; margin:0 0 28px; font-size:clamp(22px,4vw,32px);">
+     Little Timeline ✨
+  </h2>
+
+  <div id="tlWrap" style="max-width:900px;margin:0 auto;position:relative;padding:12px 0;">
+    <!-- vertical line -->
+    <div style="position:absolute;left:50%;top:0;bottom:0;width:3px;background:rgba(255,255,255,.35);transform:translateX(-50%);"></div>
+
+    <!-- Items -->
+    <div class="tlItem" style="position:relative;display:flex;gap:16px;margin:28px 0;opacity:.1;transform:translateY(30px);transition:.6s;">
+      <div style="flex:1;"></div>
+      <div style="position:absolute;left:50%;transform:translate(-50%,6px);width:14px;height:14px;border-radius:50%;background:#ff69b4;box-shadow:0 0 12px #ff69b4;"></div>
+      <div class="tlCard" style="flex:1;background:rgba(255,255,255,.12);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.25);">
+        <h3 style="margin:0 0 6px;color:#ffeb3b;">2015-Class 6th</h3>
+        <img height="80%" width="100%" src="IMAGES/cl6.jpg">
+      </div>
+    </div>
+
+    <div class="tlItem" style="position:relative;display:flex;gap:16px;margin:28px 0;opacity:.1;transform:translateY(30px);transition:.6s;">
+      <div class="tlCard" style="flex:1;background:rgba(255,255,255,.12);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.25);">
+        <h3 style="margin:0 0 6px;color:#ffeb3b;">2018-Class 9</h3>
+        <img height="80%" width="100%" src="IMAGES/cl9.jpg">
+      </div>
+      <div style="position:absolute;left:50%;transform:translate(-50%,6px);width:14px;height:14px;border-radius:50%;background:#7cf;box-shadow:0 0 12px #7cf;"></div>
+      <div style="flex:1;"></div>
+    </div>
+
+    <div class="tlItem" style="position:relative;display:flex;gap:16px;margin:28px 0;opacity:.1;transform:translateY(30px);transition:.6s;">
+      <div style="flex:1;"></div>
+      <div style="position:absolute;left:50%;transform:translate(-50%,6px);width:14px;height:14px;border-radius:50%;background:#a0ff72;box-shadow:0 0 12px #a0ff72;"></div>
+      <div class="tlCard" style="flex:1;background:rgba(255,255,255,.12);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.25);">
+        <h3 style="margin:0 0 6px;color:#ffeb3b;">2024</h3>
+        <p style="margin:0;">Congratulations on your graduation! 🎉</p>
+      </div>
+    </div>
+
+    <div class="tlItem" style="position:relative;display:flex;gap:16px;margin:28px 0;opacity:.1;transform:translateY(30px);transition:.6s;">
+      <div class="tlCard" style="flex:1;background:rgba(255,255,255,.12);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.25);">
+        <h3 style="margin:0 0 6px;color:#ffeb3b;">Today</h3>
+        <img height="80%" width="100%" src="IMAGES/hbd.png">
+      </div>
+      <div style="position:absolute;left:50%;transform:translate(-50%,6px);width:14px;height:14px;border-radius:50%;background:#ff9e7d;box-shadow:0 0 12px #ff9e7d;"></div>
+      <div style="flex:1;"></div>
+    </div>
+  </div>
+
+  <script>
+    // Intersection Observer for reveal
+    (function tlReveal(){
+      const items = document.querySelectorAll('#tlSection .tlItem');
+      const io = new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            e.target.style.opacity = 1;
+            e.target.style.transform = 'translateY(0)';
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      items.forEach(it=>io.observe(it));
+    })();
+  </script>
+</section>
+<!-- =================== SECTION: MUSIC / VOICE NOTE =================== -->
+<!-- Reels Section -->
+<section class="reels">
+  <h2>✨  Reels ✨</h2>
+ <div class="reel-container">
+  <video src="reels/charkha.mp4" controls></video>
+  <video src="reels/safal.mp4" controls></video>
+  <video src="reels/devane.mp4" controls></video>
+  <video src="reels/sirf.mp4" controls></video>
+  <video src="reels/hbd.mp4" controls></video>
+</div>
+
+</section>
+
+<style>
+.reels {
+  text-align: center;
+  padding: 40px 20px;
+  background: #ac1c47;
+}
+.reels h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ff4da6;
+}
+.reel-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.reel-container iframe {
+  width: 100%;
+  aspect-ratio: 9/16; /* Reels ke liye perfect size */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.reel-container {
+  background: linear-gradient(to right, #ff4ecd, #7a00ff, #007bff);
+  border-radius: 12px;
+  border: rgb(139, 134, 203) dashed 3px;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* gap: 15px; */
+  max-width: 400px;
+  /* margin: auto/; */
+}
+
+.reel-container video {
+  height :80%;
+  width: 100%;
+  border:white 2px solid;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  
+}
+</style>
+
+
+<!-- =================== SECTION: WISH WALL =================== -->
+<section id="wishWall" style="padding:32px 12px;color:#fff;">
+  <h2 style="text-align:center;margin:0 0 18px;font-size:clamp(20px,4vw,28px);">Wish Wall 💌</h2>
+
+  <!-- Grid -->
+  <div id="wishGrid">
+    <div class="wishCard">Hmesha ye chulbula pan barkarar rhe ✨</div>
+    <div class="wishCard">Apne fashion se Miss univeses me darr ka mahaul late raho 😄</div>
+    <div class="wishCard">Jai Shree Ram 🙏<br>Thala_paglu</div>
+    <div class="wishCard">This is where it ends… take care.</div>
+  </div>
+</section>
+
+<style>
+  #wishGrid {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    padding: 8px;
+  }
+
+  .wishCard {
+    background: rgba(14, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, .25);
+    padding: 14px;
+    border-radius: 14px;
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+    animation: wwFloat 6s ease-in-out infinite;
+    font-size: clamp(14px, 3.5vw, 16px); /* text size mobile ke hisaab se adjust hoga */
+  }
+
+  @keyframes wwFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Mobile friendly tweaks */
+  @media (max-width: 480px) {
+    #wishGrid {
+      grid-template-columns: 1fr; /* mobile pe ek row me ek card */
+    }
+    .wishCard {
+      min-height: auto;
+      padding: 16px;
+    }
+  }
+</style>
+
+  <!-- Scoped keyframes -->
+  <style>
+    @keyframes wwFloat {
+      0%   { transform: translateY(0) scale(1); }
+      50%  { transform: translateY(-6px) scale(1.02); }
+      100% { transform: translateY(0) scale(1); }
+    }
+  </style>
+
+  <script>
+    (function wishWall(){
+      const grid = document.getElementById('wishGrid');
+      const input = document.getElementById('wishInput');
+      const addBtn = document.getElementById('wishAddBtn');
+
+      addBtn.onclick = ()=> {
+        const txt = (input.value || '').trim();
+        if(!txt) { input.focus(); return; }
+
+        const card = document.createElement('div');
+        card.className = 'wishCard';
+        card.textContent = txt + ' ✨';
+        card.style.cssText = "background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:14px;border-radius:14px;min-height:88px;display:flex;align-items:center;justify-content:center;text-align:center;animation:wwFloat 6s ease-in-out infinite;";
+        grid.prepend(card);
+        input.value = '';
+
+        // confetti burst
+        burstAt(addBtn.getBoundingClientRect());
+      };
+
+      // Simple confetti
+      function burstAt(rect){
+        const cx = rect.left + rect.width/2 + window.scrollX;
+        const cy = rect.top + rect.height/2 + window.scrollY;
+        for(let i=0;i<24;i++){
+          const s = document.createElement('span');
+          s.textContent = ['🎉','✨','💖','🎈','⭐'][Math.floor(Math.random()*5)];
+          s.style.position='absolute';
+          s.style.left = cx+'px';
+          s.style.top  = cy+'px';
+          s.style.pointerEvents='none';
+          const dx = (Math.random()-0.5)*220;
+          const dy = (Math.random()-0.8)*260;
+          const rot = Math.random()*360;
+          s.style.transition='transform 900ms ease-out, opacity 900ms ease-out';
+          s.style.transform=`translate(0,0) rotate(0deg)`;
+          s.style.opacity='1';
+          document.body.appendChild(s);
+          requestAnimationFrame(()=>{
+            s.style.transform=`translate(${dx}px, ${dy}px) rotate(${rot}deg)`;
+            s.style.opacity='0';
+          });
+          setTimeout(()=>s.remove(), 1000);
+        }
+      }
+    })();
+  </script>
+</section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -307,4 +638,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
